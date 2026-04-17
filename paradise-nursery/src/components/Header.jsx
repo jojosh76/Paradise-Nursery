@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';   // ← Cette ligne doit marcher après installation
 
 const Header = () => {
   const { totalQuantity } = useSelector(state => state.cart);

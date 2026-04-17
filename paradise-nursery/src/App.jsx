@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Ajout de Link
 import { Provider } from 'react-redux';
-import store from './redux/store';   // On va le créer juste après
+import store from './redux/store';
 
 import Header from './components/Header';
-import ProductList from './components/ProductList';
+import ProductList from './pages/ProductList'; // VERIFIE BIEN LE DOSSIER ICI
 import Cart from './components/Cart';
 import AboutUs from './pages/AboutUs';
 
@@ -21,7 +21,10 @@ function App() {
               <div className="home-content">
                 <h1>Paradise Nursery</h1>
                 <p>Bring Nature Into Your Home</p>
-                <a href="/products"><button>Get Started</button></a>
+                {/* Utilisation de Link au lieu de <a> pour éviter le refresh */}
+                <Link to="/products">
+                  <button className="get-started-btn">Get Started</button>
+                </Link>
               </div>
             </div>
           } />
