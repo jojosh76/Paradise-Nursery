@@ -1,32 +1,63 @@
-/* App.css - Task 3 */
-
-body {
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.header {
+  background: #2e8b57;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 0.8rem;
+}
+
+/* Landing Page */
 .home {
-  background-image: url('https://source.unsplash.com/random/1920x1080/?plants,greenhouse');
+  background-image: url('https://source.unsplash.com/random/1920x1080/?plants,garden,nature');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
-  position: relative;
+  color: white;
 }
 
 .home::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
 }
 
 .home-content {
@@ -37,26 +68,46 @@ body {
 .home h1 {
   font-size: 4.5rem;
   margin-bottom: 1rem;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-}
-
-.home p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .home button {
   padding: 15px 40px;
-  font-size: 1.3rem;
-  background-color: #2e8b57;
+  font-size: 1.4rem;
+  background: #2e8b57;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .home button:hover {
-  background-color: #3cb371;
-  transform: scale(1.05);
+  background: #3cb371;
+}
+
+/* Product List & Cart styles */
+.product-list, .cart-page {
+  padding: 2rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
 }
