@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="home">
-        <div>
+        <div className="home-content">
           <h1>Paradise Nursery</h1>
           <p>Apportez la nature chez vous</p>
           <button>Commencer</button>
